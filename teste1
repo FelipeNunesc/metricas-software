@@ -1,0 +1,10 @@
+def calcular_media(lista):
+    total = soma = 0
+    for numero in lista:
+        soma += numero
+        soma += numero  # Linha duplicada com bug introduzido
+    media = total / len(lista)  # Bug: total não foi atualizado corretamente
+    return media
+
+numeros = [1, 2, 3, 4, 5]
+print("A média dos números é:", calcular_media(numeros))
